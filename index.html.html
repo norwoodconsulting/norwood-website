@@ -199,7 +199,8 @@ h1{animation:fadeUp .5s ease .15s both}
 .hero-btns{animation:fadeUp .5s ease .35s both}
 .hero-stats{animation:fadeUp .5s ease .45s both}
 .hero-right{animation:fadeUp .5s ease .3s both}
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.reveal{opacity:1;transform:translateY(0);transition:opacity .5s ease,transform .5s ease}
+.reveal.pre{opacity:0;transform:translateY(16px)}
 .reveal.on{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.06s}.d2{transition-delay:.12s}.d3{transition-delay:.18s}.d4{transition-delay:.24s}
 
@@ -712,17 +713,32 @@ const dashObs = new IntersectionObserver(entries => {
 const dashEl = document.getElementById('dash-body');
 if (dashEl) dashObs.observe(dashEl);
 
-// Reveal on scroll
-const obs = new IntersectionObserver(e => {
-  e.forEach(x => { if(x.isIntersecting) x.target.classList.add('on'); });
-}, {threshold:.08,rootMargin:'0px 0px -30px 0px'});
+// Scroll reveal - progressive enhancement only
+// Elements start visible, animate in if JS works
 document.querySelectorAll('.reveal').forEach(el => {
-  obs.observe(el);
   const r = el.getBoundingClientRect();
-  if(r.top < window.innerHeight) el.classList.add('on');
+  if(r.top > window.innerHeight) {
+    el.classList.add('pre'); // only hide if below fold
+  }
 });
-// Fallback — reveal all after 400ms
-setTimeout(() => document.querySelectorAll('.reveal').forEach(el => el.classList.add('on')), 400);
+
+const obs = new IntersectionObserver(e => {
+  e.forEach(x => {
+    if(x.isIntersecting) {
+      x.target.classList.remove('pre');
+      x.target.classList.add('on');
+    }
+  });
+}, {threshold:.05, rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Guarantee everything visible after 600ms regardless
+setTimeout(() => {
+  document.querySelectorAll('.reveal').forEach(el => {
+    el.classList.remove('pre');
+    el.classList.add('on');
+  });
+}, 600);
 
 // Nav shrink on scroll
 window.addEventListener('scroll', () => {
