@@ -123,7 +123,7 @@ h1 em{font-style:normal;color:var(--gold)}
 
 /* METRICS STRIP */
 .metrics-strip{position:relative;z-index:1;padding:72px 60px;background:linear-gradient(180deg,rgba(201,168,76,0.03) 0%,transparent 100%)}
-.metrics-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+.metrics-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.06);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
 .metric-card{background:#07090d;padding:32px 28px;text-align:center;position:relative;overflow:hidden;transition:background .2s}
 .metric-card:hover{background:var(--s1)}
 .metric-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .4s}
@@ -142,9 +142,9 @@ h2 em{color:var(--gold);font-style:normal}
 .sec-sub{font-size:15px;color:var(--mu);font-weight:300;line-height:1.75;max-width:480px}
 
 /* SERVICES */
-.svc-hd{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:52px}
+.svc-hd{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:60px;align-items:end;margin-bottom:52px}
 .svc-note{font-size:15px;color:var(--mu);font-weight:300;line-height:1.75;padding-left:22px;border-left:2px solid rgba(201,168,76,.3)}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.06)}
 .svc-card{background:#07090d;padding:32px 28px;position:relative;overflow:hidden;transition:all .25s;cursor:default}
 .svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .35s}
 .svc-card:hover{background:var(--s1)}
@@ -156,7 +156,7 @@ h2 em{color:var(--gold);font-style:normal}
 
 /* BEFORE/AFTER INFOGRAPHIC */
 .ba-sec{background:var(--s1);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
-.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:52px}
+.ba-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;margin-top:52px}
 .ba-col{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.07)}
 .ba-col-head{padding:16px 22px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600}
 .ba-col-head.bad{background:rgba(239,68,68,.08);border-bottom:1px solid rgba(239,68,68,.15);color:#ef4444}
@@ -185,7 +185,7 @@ h2 em{color:var(--gold);font-style:normal}
 
 /* HOW IT WORKS */
 .how-bg{background:var(--s1);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
-.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.how-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:start}
 .steps{display:flex;flex-direction:column}
 .step{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.05);cursor:default}
 .step:last-child{border:none}
@@ -204,7 +204,7 @@ h2 em{color:var(--gold);font-style:normal}
 .flow-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
 
 /* WHY */
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.06);margin-top:52px;border-radius:8px;overflow:hidden}
+.why-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:52px;border-radius:8px;overflow:hidden}
 .why-card{background:#07090d;padding:32px 28px;cursor:default;position:relative;overflow:hidden;transition:background .2s}
 .why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .why-card:hover{background:var(--s1)}
@@ -215,7 +215,7 @@ h2 em{color:var(--gold);font-style:normal}
 
 /* FUNNEL VISUAL */
 .funnel-sec{background:var(--s1);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
-.funnel-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:16px}
+.funnel-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center;margin-top:16px}
 .funnel-vis{display:flex;flex-direction:column;gap:0;align-items:center}
 .funnel-step{display:flex;align-items:center;gap:0;width:100%;position:relative}
 .funnel-bar{height:52px;display:flex;align-items:center;padding:0 20px;border-radius:6px;color:#07090d;font-size:13px;font-weight:600;transition:all .3s;cursor:default;animation:barIn 1.5s ease both}
@@ -229,19 +229,19 @@ h2 em{color:var(--gold);font-style:normal}
 
 /* CASE STUDIES */
 .cs-center{text-align:center;margin-bottom:48px}
-.cs-regions{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.cs-regions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:20px}
 .cs-region{padding:24px 16px;background:#07090d;border:1px solid rgba(255,255,255,.07);border-radius:10px;text-align:center;transition:all .2s;cursor:default}
 .cs-region:hover{border-color:rgba(201,168,76,.3);background:var(--s1)}
 .cs-region img{width:44px;height:33px;border-radius:3px;margin:0 auto 10px;box-shadow:0 2px 8px rgba(0,0,0,.4);object-fit:cover}
 .cs-region-name{font-size:13px;font-weight:600;color:var(--tx)}
-.cs-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06);border-radius:10px;overflow:hidden;margin-bottom:16px;border:1px solid rgba(255,255,255,.06)}
+.cs-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.06);border-radius:10px;overflow:hidden;margin-bottom:16px;border:1px solid rgba(255,255,255,.06)}
 .cs-metric{background:#07090d;padding:24px;text-align:center}
 .cs-metric-n{font-size:36px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:4px}
 .cs-metric-l{font-size:11px;color:var(--mu);font-weight:300}
 .cs-note{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border:1px solid rgba(201,168,76,.2);border-radius:8px;background:rgba(201,168,76,.04);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:.06em}
 
 /* CONTACT */
-.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.ct-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:60px}
 .ct-links{display:flex;flex-direction:column;gap:10px;margin-top:28px}
 .ct-link{display:flex;align-items:center;gap:14px;padding:15px 18px;background:var(--s1);border:1px solid rgba(255,255,255,.07);border-radius:8px;transition:all .2s}
 .ct-link:hover{border-color:rgba(201,168,76,.3);background:var(--s2);transform:translateX(4px)}
@@ -272,7 +272,7 @@ h2 em{color:var(--gold);font-style:normal}
 
 /* FOOTER */
 footer{border-top:1px solid rgba(255,255,255,.06);padding:56px 60px;position:relative;z-index:1}
-.foot-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px;margin-bottom:40px}
+.foot-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:60px;margin-bottom:40px}
 .foot-logo{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .foot-logo img{width:30px;height:30px;object-fit:contain;filter:invert(1);opacity:.8}
 .foot-logo-name{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
@@ -312,7 +312,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:56px 60px;position:rel
   .hstat:last-child{border:none;padding:0}
 
   .metrics-strip{padding:40px 20px}
-  .metrics-inner{grid-template-columns:1fr 1fr}
+  .metrics-inner{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .metric-num{font-size:36px}
 
   .sec{padding:64px 20px}
@@ -341,7 +341,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:56px 60px;position:rel
   .funnel-label{display:none}
   .funnel-bar{font-size:11px}
 
-  .cs-regions{grid-template-columns:1fr 1fr}
+  .cs-regions{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .cs-metrics{grid-template-columns:1fr}
   .ct-grid{grid-template-columns:1fr;gap:36px}
 
@@ -361,6 +361,128 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:56px 60px;position:rel
 .funnel-card{background:var(--s1);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px 20px;transition:border-color .2s,transform .2s;cursor:default}
 .funnel-card:hover{border-color:rgba(255,255,255,.18);transform:translateX(6px)}
 @media(max-width:768px){.funnel-main-grid{grid-template-columns:1fr!important;gap:36px!important}}
+
+/* Service icon animations */
+.svc-icon{transition:transform .3s ease,filter .3s ease}
+.svc-card:hover .svc-icon{transform:scale(1.15) rotate(-5deg);filter:drop-shadow(0 0 8px rgba(201,168,76,0.4))}
+.svc-card.animated .svc-icon{animation:iconPop .5s ease both}
+@keyframes iconPop{0%{transform:scale(0.5);opacity:0}70%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
+
+/* Icon-specific hover animations */
+.svc-card:nth-child(1):hover .svc-icon{transform:scale(1.1);animation:iconSpin 1.2s linear infinite}
+.svc-card:nth-child(2):hover .svc-icon{transform:scale(1.1) translateX(3px)}
+.svc-card:nth-child(5):hover .svc-icon{animation:iconSpin 1s linear infinite}
+@keyframes iconSpin{from{transform:rotate(0deg) scale(1.1)}to{transform:rotate(360deg) scale(1.1)}}
+
+/* Why icon animations */
+.why-card:hover .why-icon{transform:scale(1.12);filter:drop-shadow(0 0 6px rgba(201,168,76,0.3));transition:all .3s ease}
+.why-icon{transition:all .3s ease}
+
+/* Mobile / zoom fixes */
+.svc-grid{min-width:0}
+.svc-card{min-width:0;overflow:hidden}
+.metrics-inner{min-width:0}
+.metric-card{min-width:0;overflow:hidden}
+.metric-num{word-break:break-all;font-size:clamp(28px,5vw,48px)}
+.hero-inner{min-width:0}
+.hero-left{min-width:0;overflow:hidden}
+h1{word-break:break-word}
+.hero-sub{word-break:break-word}
+.ba-grid{min-width:0}
+.ba-col{min-width:0;overflow:hidden}
+.ba-text{word-break:break-word}
+.funnel-main-grid{min-width:0}
+.how-grid{min-width:0}
+.ct-grid{min-width:0}
+.foot-inner{min-width:0}
+
+/* Better zoom handling */
+@media(max-width:600px){
+  .svc-grid{grid-template-columns:1fr!important}
+  .ba-grid{grid-template-columns:1fr!important}
+  .cs-regions{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+  .cs-metrics{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+  .hero-stats{flex-direction:column}
+  .metrics-inner{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+  .journey-steps{flex-direction:column}
+  .funnel-main-grid{grid-template-columns:1fr!important}
+  .how-grid{grid-template-columns:1fr!important}
+  .ct-grid{grid-template-columns:1fr!important}
+  .why-grid{grid-template-columns:1fr!important}
+  nav{padding:12px 16px!important}
+  .sec{padding:56px 16px!important}
+  .hero{padding:80px 16px 52px!important}
+  .metrics-strip{padding:40px 16px!important}
+  footer{padding:40px 16px!important}
+  .cta-sec{padding:72px 16px!important}
+  h1{font-size:clamp(28px,8vw,44px)!important}
+  h2{font-size:clamp(22px,6vw,34px)!important}
+}
+
+/* ══ PATIENT JOURNEY ANIMATIONS ══ */
+.j-circle{transition:all .3s ease;opacity:0;transform:scale(0.5)}
+.j-circle.pop{opacity:1;transform:scale(1);animation:circlePop .5s ease both}
+@keyframes circlePop{0%{transform:scale(0.3);opacity:0}60%{transform:scale(1.2)}100%{transform:scale(1);opacity:1}}
+.j-title{opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .4s ease}
+.j-desc{opacity:0;transform:translateY(8px);transition:opacity .4s ease .1s,transform .4s ease .1s}
+.j-time{opacity:0;transition:opacity .4s ease .2s}
+.j-step.animated .j-title,
+.j-step.animated .j-desc,
+.j-step.animated .j-time{opacity:1;transform:none}
+/* Journey connecting line draw */
+.journey-steps::before{width:0;transition:width 1.5s ease .3s}
+.journey-steps.line-drawn::before{width:100%}
+
+/* ══ BEFORE/AFTER STAGGER ══ */
+.ba-item{opacity:0;transform:translateX(-12px);transition:opacity .4s ease,transform .4s ease}
+.ba-col.bad .ba-item{transform:translateX(-16px)}
+.ba-col.good .ba-item{transform:translateX(16px)}
+.ba-item.show{opacity:1;transform:none}
+
+/* ══ HOW IT WORKS STEPS ══ */
+.step-circle{transition:all .3s ease}
+.step{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.step.show{opacity:1;transform:none}
+
+/* ══ WHY CARDS ══ */
+.why-card{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.why-card.show{opacity:1;transform:none}
+
+/* ══ FUNNEL DIVIDERS ══ */
+.funnel-divider-line{width:0!important;transition:width 0.8s ease}
+.funnel-divider-line.show{width:100%!important}
+
+/* ══ SERVICE CARDS STAGGER ══ */
+.svc-card{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.svc-card.show{opacity:1;transform:translateY(0)}
+
+/* ══ METRIC CARDS ══ */
+.metric-card{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.metric-card.show{opacity:1;transform:none}
+
+/* ══ CS REGION CARDS ══ */
+.cs-region{opacity:0;transform:translateY(12px) scale(0.95);transition:opacity .4s ease,transform .4s ease}
+.cs-region.show{opacity:1;transform:none}
+
+/* ══ CS METRIC CARDS ══ */
+.cs-metric{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.cs-metric.show{opacity:1;transform:none}
+
+/* ══ FUNNEL CARDS ══ */
+.funnel-card{opacity:0;transform:translateX(-16px);transition:opacity .4s ease,transform .4s ease}
+.funnel-card.show{opacity:1;transform:none}
+.funnel-stat{opacity:0;transform:translateX(16px);transition:opacity .5s ease,transform .5s ease}
+.funnel-stat.show{opacity:1;transform:none}
+
+/* ══ CONTACT LINKS ══ */
+.ct-link{opacity:0;transform:translateX(-12px);transition:opacity .4s ease,transform .4s ease}
+.ct-link.show{opacity:1;transform:none}
+
+/* ══ HERO BADGES ══ */
+@keyframes badgePop{0%{opacity:0;transform:scale(0.7)}80%{transform:scale(1.05)}100%{opacity:1;transform:scale(1)}}
+.badge-float{opacity:0;animation:badgePop .6s ease both}
+.badge-float:nth-child(1){animation-delay:1.2s}
+.badge-float:nth-child(2){animation-delay:1.6s}
 </style>
 </head>
 <body>
@@ -628,7 +750,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:56px 60px;position:rel
       <h2>Where clinics lose <em>revenue.</em></h2>
       <p class="sec-sub" style="margin:12px auto 0;text-align:center;max-width:480px">Out of every 100 leads that click your ad, only 10 show up to a consultation. Here's exactly where they're lost — and what we do about it.</p>
     </div>
-    <div class="funnel-main-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+    <div class="funnel-main-grid" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start">
       <div id="funnelVis" style="display:flex;flex-direction:column;gap:10px">
         <div class="funnel-card reveal d1" data-target="100" data-pct="100">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
@@ -895,133 +1017,201 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:56px 60px;position:rel
 </footer>
 
 <script>
-// Mobile menu
+// ── MOBILE MENU ──
 function toggleMobileMenu(){
-  const m=document.getElementById('mobileMenu');
-  const h=document.getElementById('hamburger');
-  m.classList.toggle('open');
-  h.classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
 }
 function closeMobileMenu(){
   document.getElementById('mobileMenu').classList.remove('open');
   document.getElementById('hamburger').classList.remove('open');
 }
 
-// Nav shrink
+// ── NAV SHRINK ──
 window.addEventListener('scroll',()=>{
   const n=document.getElementById('nav');
   if(n) n.style.padding=window.scrollY>60?'12px 60px':'18px 60px';
-});
+},{passive:true});
 
-// Counter animation
-function count(el,target,dur,suffix){
-  if(!el)return;
-  let s=null;
-  const step=ts=>{
-    if(!s)s=ts;
-    const p=Math.min((ts-s)/dur,1);
+// ── COUNTER ──
+function countUp(id,target,dur,suffix,innerHTML){
+  const el=document.getElementById(id);
+  if(!el||el.dataset.counted) return;
+  el.dataset.counted='true';
+  const start=performance.now();
+  const step=now=>{
+    const p=Math.min((now-start)/dur,1);
     const ease=1-Math.pow(1-p,3);
-    el.innerHTML=Math.round(ease*target)+(suffix||'');
-    if(p<1)requestAnimationFrame(step);
+    if(innerHTML) el.innerHTML=Math.round(ease*target)+(suffix||'');
+    else el.textContent=Math.round(ease*target)+(suffix||'');
+    if(p<1) requestAnimationFrame(step);
   };
   requestAnimationFrame(step);
 }
 
-// Intersection observer for reveal + counters
-// Only pre-hide elements below the fold
-document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>{
-  const r=el.getBoundingClientRect();
-  if(r.top>window.innerHeight+100) el.classList.add('pre');
-});
-// Hard fallback — reveal everything after 500ms no matter what
-setTimeout(()=>document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>{
-  el.classList.remove('pre');el.classList.add('on');
-}),500);
+// ── IN VIEW CHECK ──
+function inView(el,offset){
+  if(!el) return false;
+  const r=(typeof el==='string'?document.getElementById(el):el);
+  if(!r) return false;
+  const rect=r.getBoundingClientRect();
+  return rect.top<window.innerHeight-(offset||60) && rect.bottom>0;
+}
 
-const metricsDone={};
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.remove('pre');
-      e.target.classList.add('on');
-      // Metrics strip
-      if(e.target.id==='m1'&&!metricsDone.m){
-        metricsDone.m=true;
-        count(document.getElementById('m1'),30,1600,'+');
-        count(document.getElementById('m2'),60,1400,'');
-        count(document.getElementById('m3'),82,1800,'%');
-        count(document.getElementById('m4'),100,1200,'%');
-      }
-      // Case study metrics
-      if(e.target.id==='cs1'&&!metricsDone.cs){
-        metricsDone.cs=true;
-        count(document.getElementById('cs1'),12,1400,'+');
-        count(document.getElementById('cs2'),500,1800,'+');
-        const cs3=document.getElementById('cs3');
-        if(cs3){
-          let s=null;
-          const step=ts=>{if(!s)s=ts;const p=Math.min((ts-s)/1600,1);const e=1-Math.pow(1-p,3);cs3.innerHTML=Math.round(e*82)+'<span style="font-size:20px">%</span>';if(p<1)requestAnimationFrame(step);};
+// ── FIRE FLAGS ──
+const F={};
+function once(key,fn){if(!F[key]){F[key]=true;fn();}}
+
+// ── STAGGER HELPER ──
+function stagger(els,cls,delay){
+  els.forEach((el,i)=>setTimeout(()=>el.classList.add(cls),i*(delay||100)));
+}
+
+// ── MASTER ANIMATION CHECK ──
+function checkAll(){
+
+  // DASHBOARD
+  if(inView('c1')) once('dash',()=>{
+    countUp('c1',247,1800,'');
+    countUp('c2',78,1600,'%');
+    countUp('c3',26,1400,'');
+    countUp('c4',84,1700,'%');
+    setTimeout(()=>{const e=document.getElementById('c5');if(e&&!e.dataset.counted){e.dataset.counted='true';e.textContent='<60s';}},700);
+  });
+
+  // METRICS STRIP
+  if(inView('m1')) once('metrics',()=>{
+    stagger(document.querySelectorAll('.metric-card'),'show',120);
+    setTimeout(()=>{
+      countUp('m1',30,1600,'+');
+      countUp('m2',60,1400,'s');
+      countUp('m3',82,1800,'%');
+      countUp('m4',100,1200,'%');
+    },200);
+  });
+
+  // SERVICE CARDS
+  if(inView(document.querySelector('.svc-grid'))) once('svc',()=>{
+    stagger(document.querySelectorAll('.svc-card'),'show',100);
+    setTimeout(()=>stagger(document.querySelectorAll('.svc-card'),'animated',100),200);
+  });
+
+  // BEFORE/AFTER
+  const badCol=document.querySelector('.ba-col.bad');
+  const goodCol=document.querySelector('.ba-col.good');
+  if(inView(badCol)) once('ba',()=>{
+    const items=document.querySelectorAll('.ba-col.bad .ba-item');
+    stagger(items,'show',100);
+    setTimeout(()=>stagger(document.querySelectorAll('.ba-col.good .ba-item'),'show',100),200);
+  });
+
+  // PATIENT JOURNEY
+  const journey=document.querySelector('.journey-steps');
+  if(inView(journey,80)) once('journey',()=>{
+    journey.classList.add('line-drawn');
+    document.querySelectorAll('.j-step').forEach((step,i)=>{
+      setTimeout(()=>{
+        step.classList.add('animated');
+        step.querySelector('.j-circle')&&step.querySelector('.j-circle').classList.add('pop');
+      },i*200);
+    });
+  });
+
+  // HOW IT WORKS STEPS
+  if(inView(document.querySelector('.steps'))) once('steps',()=>{
+    stagger(document.querySelectorAll('.step'),'show',120);
+  });
+
+  // WHY CARDS
+  if(inView(document.querySelector('.why-grid'))) once('why',()=>{
+    stagger(document.querySelectorAll('.why-card'),'show',120);
+  });
+
+  // FUNNEL
+  const fc=document.querySelector('.funnel-card');
+  if(inView(fc,80)) once('funnel',()=>{
+    stagger(document.querySelectorAll('.funnel-card'),'show',140);
+    stagger(document.querySelectorAll('.funnel-stat'),'show',160);
+    document.querySelectorAll('.funnel-card').forEach((card,i)=>{
+      const target=parseInt(card.dataset.target||0);
+      const pct=parseInt(card.dataset.pct||0);
+      setTimeout(()=>{
+        const bar=card.querySelector('.fc-bar');
+        const num=card.querySelector('.fc-num');
+        if(bar) bar.style.width=pct+'%';
+        if(num&&target>0&&!num.dataset.counted){
+          num.dataset.counted='true';
+          const s=performance.now();
+          const step=now=>{
+            const p=Math.min((now-s)/900,1);
+            const e=1-Math.pow(1-p,3);
+            num.textContent=Math.round(e*target);
+            if(p<1)requestAnimationFrame(step);
+          };
           requestAnimationFrame(step);
         }
+      },i*140+200);
+    });
+  });
+
+  // CASE STUDIES - regions
+  if(inView(document.querySelector('.cs-regions'))) once('csreg',()=>{
+    stagger(document.querySelectorAll('.cs-region'),'show',100);
+  });
+
+  // CASE STUDIES - metrics
+  if(inView('cs1')) once('cs',()=>{
+    stagger(document.querySelectorAll('.cs-metric'),'show',150);
+    setTimeout(()=>{
+      countUp('cs1',12,1400,'+');
+      countUp('cs2',500,1800,'+');
+      const cs3=document.getElementById('cs3');
+      if(cs3&&!cs3.dataset.counted){
+        cs3.dataset.counted='true';
+        const s=performance.now();
+        const step=now=>{
+          const p=Math.min((now-s)/1600,1);
+          const e=1-Math.pow(1-p,3);
+          cs3.innerHTML=Math.round(e*82)+'<span style="font-size:20px">%</span>';
+          if(p<1)requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
       }
-      // Dashboard
-      if(e.target.id==='c1'&&!metricsDone.dash){
-        metricsDone.dash=true;
-        setTimeout(()=>{
-          count(document.getElementById('c1'),247,1800,'');
-          count(document.getElementById('c2'),78,1600,'%');
-          count(document.getElementById('c3'),26,1400,'');
-          count(document.getElementById('c4'),84,1700,'%');
-          setTimeout(()=>{const el=document.getElementById('c5');if(el)el.textContent='<60s';},600);
-        },300);
-      }
+    },200);
+  });
+
+  // CONTACT LINKS
+  if(inView(document.querySelector('.ct-link'))) once('ct',()=>{
+    stagger(document.querySelectorAll('.ct-link'),'show',100);
+  });
+
+  // REVEAL CLASSES
+  document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>{
+    if(inView(el,40)){
+      el.classList.remove('pre');
+      el.classList.add('on');
     }
   });
-},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+}
 
-// Observe all reveal elements + counter triggers
-document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>{
-  const r=el.getBoundingClientRect();
-  if(r.top<window.innerHeight)el.classList.add('on');
-  obs.observe(el);
+// ── SCROLL & LOAD ──
+window.addEventListener('scroll',checkAll,{passive:true});
+window.addEventListener('load',()=>{
+  checkAll();
+  setTimeout(checkAll,300);
+  setTimeout(()=>{
+    // Hard fallback — make everything visible
+    document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>{
+      el.classList.remove('pre');el.classList.add('on');
+    });
+    ['.svc-card','.metric-card','.why-card','.ba-item','.step','.cs-region','.cs-metric','.funnel-card','.funnel-stat','.ct-link'].forEach(sel=>{
+      document.querySelectorAll(sel).forEach(el=>el.classList.add('show'));
+    });
+    document.querySelectorAll('.j-step').forEach(s=>s.classList.add('animated'));
+    document.querySelectorAll('.j-circle').forEach(c=>c.classList.add('pop'));
+    document.querySelector('.journey-steps')?.classList.add('line-drawn');
+  },1000);
 });
-['m1','cs1','c1'].forEach(id=>{
-  const el=document.getElementById(id);
-  if(el)obs.obse
-
-
-// Funnel card animations
-let funnelDone=false;
-const funnelObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting&&!funnelDone){
-      funnelDone=true;
-      document.querySelectorAll('.funnel-card').forEach((card,i)=>{
-        const target=parseInt(card.dataset.target||0);
-        const pct=parseInt(card.dataset.pct||0);
-        const numEl=card.querySelector('.fc-num');
-        const barEl=card.querySelector('.fc-bar');
-        setTimeout(()=>{
-          if(barEl)barEl.style.width=pct+'%';
-          if(numEl&&target>0){
-            let s=null;
-            const step=ts=>{
-              if(!s)s=ts;
-              const p=Math.min((ts-s)/1000,1);
-              const ease=1-Math.pow(1-p,3);
-              numEl.textContent=Math.round(ease*target);
-              if(p<1)requestAnimationFrame(step);
-            };
-            requestAnimationFrame(step);
-          }
-        },i*160);
-      });
-    }
-  });
-},{threshold:0.05});
-const fc=document.querySelector('.funnel-card');
-if(fc)funnelObs.observe(fc);
-
 </script>
 </body>
 </html>
